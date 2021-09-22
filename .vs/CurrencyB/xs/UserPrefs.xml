@@ -1,13 +1,13 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{DBB8AA5D-C214-46A3-B3F7-BD0F1B4A8F82}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="CurrencyB/MainPage.xaml">
     <Files>
       <File FileName="CurrencyB/MainPage.xaml" Line="184" Column="73" />
-      <File FileName="CurrencyB/MainPage.xaml.cs" Line="29" Column="12" />
-      <File FileName="CurrencyB/Models/Wallet.cs" Line="1" Column="1" />
-      <File FileName="CurrencyB/Services/APIService.cs" Line="22" Column="11" />
-      <File FileName="CurrencyB/Models/CurrencyConvert.cs" Line="37" Column="6" />
-      <File FileName="CurrencyB/App.xaml.cs" Line="1" Column="1" />
-      <File FileName="CurrencyB.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="CurrencyB/MainPage.xaml.cs" />
+      <File FileName="CurrencyB/Models/Wallet.cs" />
+      <File FileName="CurrencyB/Services/APIService.cs" />
+      <File FileName="CurrencyB/Models/CurrencyConvert.cs" />
+      <File FileName="CurrencyB/App.xaml.cs" />
+      <File FileName="CurrencyB.iOS/Main.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,9 +18,7 @@
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="App.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
             </Node>
             <Node name="CurrencyB.iOS" expanded="True">
               <Node name="Properties" expanded="True" />
@@ -36,7 +34,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.CurrencyB.Android FirstBuild="True" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.CurrencyB.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AEC95085-4E0C-4892-8F31-4988C5FA008B" />
+  <MonoDevelop.Ide.ItemProperties.CurrencyB.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CBCE2CBB-D4DD-4F57-8CA7-0398CA040494" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

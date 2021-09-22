@@ -19,7 +19,7 @@ namespace CurrencyB.Services
 
         public async Task<bool> GetCurrencyConvertor()
         {
-          
+
 
             HttpClient client = new HttpClient();
 
@@ -27,25 +27,22 @@ namespace CurrencyB.Services
             HttpResponseMessage response = await client.GetAsync($"http://api.exchangeratesapi.io/v1/latest?access_key=684f4eae3418819feab5f4f575fe13d4&symbols=USD,AUD,CAD,PLN,MXN,EUR&format=1");
 
 
-            Console.WriteLine("response worked ");
-
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                Console.WriteLine("Access to api didn't work");
+
 
                 return false;
-                              
+
             }
             else
-            {
-                Console.WriteLine(" made it to else");
+            { 
 
                 string content = await response.Content.ReadAsStringAsync();
 
                 main = JsonConvert.DeserializeObject<Models.CurrencyConvert>(content);
 
-                Console.WriteLine("Passed api");
+                
 
                 return true;
 
