@@ -11,10 +11,9 @@ namespace CurrencyB.Services
         
         string apiKey = "684f4eae3418819feab5f4f575fe13d4";
 
-            
-        
 
         public Models.CurrencyConvert main = new Models.CurrencyConvert();
+
 
 
         public async Task<bool> GetCurrencyConvertor()
@@ -23,30 +22,37 @@ namespace CurrencyB.Services
 
             HttpClient client = new HttpClient();
 
-
-            HttpResponseMessage response = await client.GetAsync($"http://api.exchangeratesapi.io/v1/latest?access_key=684f4eae3418819feab5f4f575fe13d4&symbols=USD,AUD,CAD,PLN,MXN,EUR&format=1");
-
-
-
-            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            try
             {
+                HttpResponseMessage response = await client.GetAsync($"http://api.exchangeratesapi.io/v1/latest?access_key=684f4eae3418819feab5f4f575fe13d4&symbols=USD,AUD,CAD,PLN,MXN,EUR&format=1");
 
 
+                if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                {
+
+                    return false;
+
+                }
+                else
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+
+                    main = JsonConvert.DeserializeObject<Models.CurrencyConvert>(content);
+
+
+                    return true;
+
+                }
+
+            }
+            catch
+            {
                 return false;
-
             }
-            else
-            { 
 
-                string content = await response.Content.ReadAsStringAsync();
 
-                main = JsonConvert.DeserializeObject<Models.CurrencyConvert>(content);
 
-                
-
-                return true;
-
-            }
+            
 
 
 

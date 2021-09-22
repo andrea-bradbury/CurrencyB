@@ -51,9 +51,9 @@
 /Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/CurrencyB.iOS.csproj.CopyComplete
 /Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/CurrencyB.iOS.exe
 /Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/CurrencyB.iOS.pdb
-/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-14.5/actool/_PartialAppManifest.items
-/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-14.5/actool/_BundleResourceWithLogicalName.items
-/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-14.5/ibtool/_BundleResourceWithLogicalName.items
-/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-14.5/coremlc/_PartialAppManifest.items
-/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-14.5/coremlc/_BundleResourceWithLogicalName.items
-/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-14.5/optimized/
+/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 12 pro max-14.5/actool/_PartialAppManifest.items
+/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 12 pro max-14.5/actool/_BundleResourceWithLogicalName.items
+/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 12 pro max-14.5/ibtool/_BundleResourceWithLogicalName.items
+/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 12 pro max-14.5/coremlc/_PartialAppManifest.items
+/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 12 pro max-14.5/coremlc/_BundleResourceWithLogicalName.items
+/Users/andreabradbury/Projects/CurrencyB/CurrencyB.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 12 pro max-14.5/optimized/

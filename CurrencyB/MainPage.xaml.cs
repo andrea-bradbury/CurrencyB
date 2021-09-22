@@ -31,7 +31,14 @@ namespace CurrencyB
 
         public async void accessAPI()
         {
-            await api.GetCurrencyConvertor();
+
+            //displaying error message if there's no internet, if the API call is wrong or if the URL changes.
+            
+            if (await api.GetCurrencyConvertor() == false)
+            {
+                await DisplayAlert("Error, please check internet connection.", "Also check exchange website is still live", "OK");
+            }
+            
         }
 
        
@@ -320,9 +327,9 @@ namespace CurrencyB
 
         void buttonUSD_Clicked(System.Object sender, System.EventArgs e)
         {
-            float usdExchange = api.main.rates.USD * (api.main.rates.EUR * api.main.rates.AUD);
+            float usdExchange = api.main.rates.USD / api.main.rates.AUD;
 
-            labelConvertedUSD.Text = $" $ {(Model.TotalValue()/(usdExchange)).ToString("F")}";
+            labelConvertedUSD.Text = $" $ {(Model.TotalValue()*(usdExchange)).ToString("F")}";
 
         }
 
@@ -331,9 +338,9 @@ namespace CurrencyB
         
         void buttonPLN_Clicked(System.Object sender, System.EventArgs e)
         {
-            float plnExchange = api.main.rates.PLN * (api.main.rates.EUR * api.main.rates.AUD);
+            float plnExchange = api.main.rates.PLN / api.main.rates.AUD;
 
-            labelConvertedPLN.Text = $" {(Model.TotalValue() / (plnExchange)).ToString("F")} zł";
+            labelConvertedPLN.Text = $" {(Model.TotalValue() * (plnExchange)).ToString("F")} zł";
         }
     }
 }
