@@ -15,22 +15,27 @@ namespace CurrencyB
     {
         Wallet Model = new Wallet();
 
-        APIService api = new APIService();
+        public APIService api = new APIService();
 
-        CurrencyConvert currencyConvert = new CurrencyConvert();
+        
+
 
         public MainPage()
         {
             InitializeComponent();
 
+            accessAPI();
 
-            buttonEUR.Text = $" EUR {currencyConvert.rates.EUR}";
-
-            //buttonUSD.Text = $" USD {(currencyConvert.rates.EUR * currencyConvert.rates.AUD)* currencyConvert.rates.USD }";
-
-            //buttonPLN.Text = $" PLN {(currencyConvert.rates.EUR * currencyConvert.rates.AUD)* currencyConvert.rates.PLN }";
-
+           
         }
+
+        public async void accessAPI()
+        {
+            await api.GetCurrencyConvertor();
+        }
+
+       
+
 
         public void updateUI()
         {
@@ -306,7 +311,7 @@ namespace CurrencyB
         void buttonEUR_Clicked(System.Object sender, System.EventArgs e)
         {
 
-            labelConvertedEur.Text = $" € {(Model.TotalValue()*(currencyConvert.rates.EUR*currencyConvert.rates.AUD)).ToString("F")}";
+            labelConvertedEur.Text = $" € {(Model.TotalValue()/api.main.rates.AUD).ToString("F")}";
         }
 
 
@@ -315,9 +320,9 @@ namespace CurrencyB
 
         void buttonUSD_Clicked(System.Object sender, System.EventArgs e)
         {
-            float usdExchange = currencyConvert.rates.USD * (currencyConvert.rates.EUR * currencyConvert.rates.AUD);
+            float usdExchange = api.main.rates.USD * (api.main.rates.EUR * api.main.rates.AUD);
 
-            labelConvertedUSD.Text = $" $ {(Model.TotalValue()*(usdExchange)).ToString("F")}";
+            labelConvertedUSD.Text = $" $ {(Model.TotalValue()/(usdExchange)).ToString("F")}";
 
         }
 
@@ -326,9 +331,9 @@ namespace CurrencyB
         
         void buttonPLN_Clicked(System.Object sender, System.EventArgs e)
         {
-            float plnExchange = currencyConvert.rates.PLN * (currencyConvert.rates.EUR * currencyConvert.rates.AUD);
+            float plnExchange = api.main.rates.PLN * (api.main.rates.EUR * api.main.rates.AUD);
 
-            labelConvertedPLN.Text = $" {(Model.TotalValue() * (plnExchange)).ToString("F")} zł";
+            labelConvertedPLN.Text = $" {(Model.TotalValue() / (plnExchange)).ToString("F")} zł";
         }
     }
 }

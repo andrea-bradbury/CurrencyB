@@ -33,7 +33,7 @@ namespace CurrencyB.Models
 
         public float MXN { get; set; }
 
-        public int EUR { get; set; }
+        public int EUR { get; set;  }
     }
 
     

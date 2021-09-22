@@ -12,29 +12,48 @@ namespace CurrencyB.Services
         string apiKey = "684f4eae3418819feab5f4f575fe13d4";
 
             
-        HttpClient client = new HttpClient();
-
-
-        public async Task<double> GetCurrencyConvertor()
-        {
-             HttpResponseMessage response = await client.GetAsync($"http://api.exchangeratesapi.io/v1/latest?access_key={apiKey}&symbols=USD,AUD,CAD,PLN,MXN&format=1");
-
-
-             if (response.StatusCode == System.Net.HttpStatusCode.OK)
-             {
-                string  content = await response.Content.ReadAsStringAsync();
-
-                JObject main = JsonConvert.DeserializeObject<JObject>(content);
-
-                main = (JObject)main.GetValue("rates");
-
-                double conversionRate = (double)main.GetValue("rates");
-
-                return conversionRate;
-             }
-
-             return 0;
-        }
         
+
+        public Models.CurrencyConvert main = new Models.CurrencyConvert();
+
+
+        public async Task<bool> GetCurrencyConvertor()
+        {
+          
+
+            HttpClient client = new HttpClient();
+
+
+            HttpResponseMessage response = await client.GetAsync($"http://api.exchangeratesapi.io/v1/latest?access_key=684f4eae3418819feab5f4f575fe13d4&symbols=USD,AUD,CAD,PLN,MXN,EUR&format=1");
+
+
+            Console.WriteLine("response worked ");
+
+
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+                Console.WriteLine("Access to api didn't work");
+
+                return false;
+                              
+            }
+            else
+            {
+                Console.WriteLine(" made it to else");
+
+                string content = await response.Content.ReadAsStringAsync();
+
+                main = JsonConvert.DeserializeObject<Models.CurrencyConvert>(content);
+
+                Console.WriteLine("Passed api");
+
+                return true;
+
+            }
+
+
+
+        }
+
     }
 }

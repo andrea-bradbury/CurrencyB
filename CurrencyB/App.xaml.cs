@@ -19,7 +19,7 @@ namespace CurrencyB
         protected override void OnStart()
         {
 
-            //((MainPage)MainPage).APIService.GetCurrencyConvertor();
+            
         }
 
         protected override void OnSleep()
