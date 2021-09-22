@@ -1,5 +1,5 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{DBB8AA5D-C214-46A3-B3F7-BD0F1B4A8F82}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="CurrencyB/MainPage.xaml">
     <Files>
       <File FileName="CurrencyB/MainPage.xaml" Line="184" Column="73" />
       <File FileName="CurrencyB/MainPage.xaml.cs" Line="343" Column="63" />
@@ -18,9 +18,7 @@
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="App.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
             </Node>
             <Node name="CurrencyB.iOS" expanded="True">
               <Node name="Properties" expanded="True" />
